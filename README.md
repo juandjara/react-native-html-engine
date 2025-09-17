@@ -1,6 +1,6 @@
 # react-native-html-engine
 
-tbd
+The hackable, full-featured Open Source HTML rendering solution for React Native.
 
 ## Installation
 
@@ -12,15 +12,32 @@ npm install react-native-html-engine
 
 ## Usage
 
+```jsx
+import React from 'react';
+import { useWindowDimensions } from 'react-native';
+import RenderHtml from 'react-native-render-html';
 
-```js
-import { multiply } from 'react-native-html-engine';
+const source = {
+  html: `
+<p style='text-align:center;'>
+  Hello World!
+</p>`
+};
 
-// ...
-
-const result = await multiply(3, 7);
+export default function App() {
+  const { width } = useWindowDimensions();
+  return (
+    <RenderHtml
+      contentWidth={width}
+      source={source}
+    />
+  );
+}
 ```
 
+## Documentation
+
+For documentation and examples, please refer to the original repository: https://github.com/meliorence/react-native-render-html
 
 ## Contributing
 
@@ -30,7 +47,7 @@ const result = await multiply(3, 7);
 
 ## License
 
-MIT
+BSD 2-Clause "Simplified" License.
 
 ---
 

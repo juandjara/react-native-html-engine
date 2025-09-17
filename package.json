@@ -1,7 +1,7 @@
 {
   "name": "react-native-html-engine",
-  "version": "0.1.0",
-  "description": "tbd",
+  "version": "7.0.0",
+  "description": "The hackable, full-featured Open Source HTML rendering solution for React Native.",
   "main": "./lib/module/index.js",
   "types": "./lib/typescript/src/index.d.ts",
   "exports": {
