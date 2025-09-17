@@ -2,6 +2,8 @@
 
 The hackable, full-featured Open Source HTML rendering solution for React Native.
 
+This is a fork of [react-native-render-html](https://github.com/meliorence/react-native-render-html) that is maintained by [Juan D. Jara](https://github.com/juandjara). I did change a lot of things, but the main goal is to keep the same API and features as the original repository. Maintaning the documentation sites and examples is not a priority of this fork, so please refer to the original repository for the most up-to-date information.
+
 ## Installation
 
 
