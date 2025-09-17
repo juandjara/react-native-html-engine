@@ -8,7 +8,7 @@ export default {
     '<rootDir>/lib/'
   ],
   transformIgnorePatterns: [
-    'node_modules/(?!(react-native|react-native-webview|ramda|react-native-render-html|@react-native|stringify-entities|character-entities-\\w+)/)'
+    'node_modules/(?!(react-native|react-native-webview|ramda|react-native-html-engine|@react-native|stringify-entities|character-entities-\\w+)/)'
   ],
   setupFiles: ['<rootDir>/jest.setup.ts'],
 }

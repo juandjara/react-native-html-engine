@@ -120,7 +120,7 @@ export default function ListElement({
       );
     } else {
       console.warn(
-        `list-style-type "${listStyleType}" is not handled by react-native-render-html. ` +
+        `list-style-type "${listStyleType}" is not handled by react-native-html-engine. ` +
           'You can easily provide support for this style via "customListStyleSpecs" prop.'
       );
     }

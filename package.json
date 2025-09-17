@@ -47,14 +47,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/juandjara/react-native-render-html.git"
+    "url": "git+https://github.com/juandjara/react-native-html-engine.git"
   },
   "author": "Juan D. Jara <hola@juandjara.com> (https://juan.djara.dev)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/juandjara/react-native-render-html/issues"
+    "url": "https://github.com/juandjara/react-native-html-engine/issues"
   },
-  "homepage": "https://github.com/juandjara/react-native-render-html#readme",
+  "homepage": "https://github.com/juandjara/react-native-html-engine#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
