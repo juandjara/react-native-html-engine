@@ -83,6 +83,7 @@ const TNodeRenderer = memo(function MemoizedTNodeRenderer(
       // See also https://git.io/JErwX
       if (
         tnodeProps.tnode.data === '' &&
+        tnodeProps.tnode.tagName == null &&
         tnodeProps.sharedProps.enableExperimentalGhostLinesPrevention
       ) {
         return null;
