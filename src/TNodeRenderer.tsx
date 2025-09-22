@@ -86,6 +86,7 @@ const TNodeRenderer = memo(function MemoizedTNodeRenderer<T extends TNode>(
             type: 'text',
             data: text,
             textNode: new Text(text),
+            getReactNativeProps: () => ({}),
           },
         } as TDefaultRendererProps<TPhrasing | TText>);
       } else {
