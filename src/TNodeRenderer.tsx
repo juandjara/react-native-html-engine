@@ -10,6 +10,7 @@ import {
   TBlock,
   TNode,
   TPhrasing,
+  Text,
 } from '@native-html/transient-render-engine';
 import useAssembledCommonProps from './hooks/useAssembledCommonProps';
 import { useTNodeChildrenRenderer } from './context/TChildrenRendererContext';
@@ -76,8 +77,17 @@ const TNodeRenderer = memo(function MemoizedTNodeRenderer<T extends TNode>(
   switch (tnode.type) {
     case 'empty':
       if (tnode.isUnregistered) {
-        (tnode as any).data = domNodeToHTMLString(tnode.domNode);
-        break;
+        const text = domNodeToHTMLString(tnode.domNode);
+        return renderTextualContent({
+          ...assembledProps,
+          type: 'text',
+          tnode: {
+            ...tnode,
+            type: 'text',
+            data: text,
+            textNode: new Text(text),
+          },
+        } as TDefaultRendererProps<TPhrasing | TText>);
       } else {
         return renderEmptyContent(assembledProps);
       }
