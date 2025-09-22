@@ -74,7 +74,11 @@ const TNodeRenderer = memo(function MemoizedTNodeRenderer<T extends TNode>(
   );
   switch (tnode.type) {
     case 'empty':
-      return renderEmptyContent(assembledProps);
+      if (tnode.isUnregistered) {
+        break;
+      } else {
+        return renderEmptyContent(assembledProps);
+      }
     case 'text':
       const InternalTextRenderer = renderRegistry.getInternalTextRenderer(
         props.tnode.tagName
