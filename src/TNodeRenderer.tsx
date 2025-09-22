@@ -18,6 +18,7 @@ import { useRendererRegistry } from './context/RenderRegistryProvider';
 import renderBlockContent from './renderBlockContent';
 import renderEmptyContent from './renderEmptyContent';
 import { TNodeSubRendererProps } from './internal-types';
+import domNodeToHTMLString from './helpers/domNodeToHTMLString';
 
 export type { TNodeRendererProps } from './shared-types';
 
@@ -75,6 +76,7 @@ const TNodeRenderer = memo(function MemoizedTNodeRenderer<T extends TNode>(
   switch (tnode.type) {
     case 'empty':
       if (tnode.isUnregistered) {
+        (tnode as any).data = domNodeToHTMLString(tnode.domNode);
         break;
       } else {
         return renderEmptyContent(assembledProps);
