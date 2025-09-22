@@ -1,6 +1,6 @@
 {
   "name": "react-native-html-engine",
-  "version": "8.0.2",
+  "version": "8.0.3",
   "description": "The hackable, full-featured Open Source HTML rendering solution for React Native.",
   "main": "./lib/module/index.js",
   "types": "./lib/typescript/src/index.d.ts",
